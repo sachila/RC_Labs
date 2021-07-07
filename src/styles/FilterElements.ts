@@ -1,7 +1,8 @@
 import { Button } from "react-bootstrap";
 import styled from "styled-components/macro";
+import { SIZES } from "./layout";
 
 export const FilterButtons = styled(Button)`
-  margin: 5px;
-  border-radius: 25px;
+  margin: ${SIZES.small};
+  border-radius: ${SIZES.xslarge};
 `;

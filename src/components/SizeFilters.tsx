@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { Button } from "react-bootstrap";
-import { XCircle } from "react-bootstrap-icons";
 import { useDispatch } from "react-redux";
 import { SizeFiltersModel } from "../models/SizeFilters";
 import { removeSizeFilter, updateSizeFilter } from "../store/action";
-import useSelector from "../store/common/useSelector";
+import { useStateSelectors } from "../store/selector";
 import { FilterButtons } from "../styles/FilterElements";
 
 export const SizeFilters: React.FC = () => {
   const dispatch = useDispatch();
-  const { sizeFilter } = useSelector((state) => state);
+  const { sizeFilter } = useStateSelectors();
 
   const [sizes, setSizes] = useState<SizeFiltersModel[]>([
     { id: "xsmall", caption: "XS", selected: false },

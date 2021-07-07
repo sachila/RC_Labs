@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { COLORS, FontBold, SIZES } from "./layout";
 
 export const MainBody = styled.div`
   display: flex;
@@ -12,9 +13,9 @@ export const FilterContainer = styled.div`
 export const CardContainer = styled.div`
   flex: 3;
   display: grid;
-  gap: 20px;
+  gap: ${SIZES.xslarge};
   grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-  padding: 10px;
+  padding: ${SIZES.normal};
 `;
 
 export const Card = styled.div`
@@ -26,25 +27,25 @@ export const ImgContainer = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: ${SIZES.small};
 `;
 
 export const CardTitle = styled.h6`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 10px;
-  font-weight: 600;
+  padding: ${SIZES.normal};
+  font-weight: ${FontBold};
 `;
 
 export const CardPrice = styled.div`
-  color: grey;
-  font-weight: 600;
+  color: ${COLORS.rcGrey};
+  font-weight: ${FontBold};
   text-align: center;
-  padding: 10px;
+  padding: ${SIZES.normal};
 `;
 
 export const CardSize = styled.div`
-  font-weight: 600;
+  font-weight: ${FontBold};
   text-align: center;
 `;

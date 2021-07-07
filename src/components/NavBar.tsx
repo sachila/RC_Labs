@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Navbar } from "react-bootstrap";
 import { Cart } from "react-bootstrap-icons";
 import { CartModal } from "../Pages/CartModal";
-import useSelector from "../store/common/useSelector";
+import { useStateSelectors } from "../store/selector";
 import { CartBatch } from "../styles/NavBarElements";
 
 export const NavbarComponent: React.FC = () => {
-  const { cartItems } = useSelector((state) => state);
+  const { cartItems } = useStateSelectors();
 
   const [show, setShow] = useState(false);
 

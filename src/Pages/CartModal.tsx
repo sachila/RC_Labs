@@ -1,6 +1,6 @@
 import { Button, Modal } from "react-bootstrap";
 import { CartItem } from "../models/CartItemModel";
-import useSelector from "../store/common/useSelector";
+import { useStateSelectors } from "../store/selector";
 import {
   CartModalContainer,
   CartValueContainer,
@@ -21,7 +21,7 @@ interface DialogProps {
 
 export const CartModal: React.FC<DialogProps> = (props) => {
   const { open, onClose } = props;
-  const { cartItems, shipments } = useSelector((state) => state);
+  const { cartItems, shipments } = useStateSelectors();
 
   const getShipmentById = (id: string) => {
     return shipments.find((item) => item.id === id);

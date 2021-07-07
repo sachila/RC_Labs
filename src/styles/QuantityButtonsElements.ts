@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import styled from "styled-components/macro";
+import { COLORS, FontBold, SIZES } from "./layout";
 
 export const AddToCartButton = styled(Button)`
   width: 100%;
@@ -10,21 +11,21 @@ export const QtyButtonsContainer = styled.div`
 `;
 
 export const QuantityLabelContainer = styled.div`
-  padding: 5px 15px;
+  padding: ${SIZES.small} ${SIZES.large};
   flex: 1;
   text-align: center;
 `;
 
 export const QuantityLabel = styled.span`
-  font-weight: 600;
-  color: grey;
+  font-weight: ${FontBold};
+  color: ${COLORS.rcGrey};
 `;
 
 export const ButtonLabel = styled.span`
-  font-weight: 600;
+  font-weight: ${FontBold};
 `;
 
 export const QtyButtons = styled(Button)`
   min-width: 60px;
-  border-radius: 10px;
+  border-radius: ${SIZES.normal};
 `;

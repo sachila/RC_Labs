@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useDispatch } from "react-redux";
 import { loadAllShipments } from "../store/action";
-import useSelector from "../store/common/useSelector";
+import { useStateSelectors } from "../store/selector";
 
 export const useLoadShipments = () => {
-  const { shipments, sizeFilter } = useSelector((state) => state);
+  const { shipments, sizeFilter } = useStateSelectors();
   const dispatch = useDispatch();
 
   return useMemo(() => {
@@ -17,5 +17,5 @@ export const useLoadShipments = () => {
     }
 
     return shipments;
-  }, [shipments, sizeFilter]);
+  }, [shipments, sizeFilter, dispatch]);
 };

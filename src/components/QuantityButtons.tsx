@@ -1,6 +1,4 @@
-import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import styled from "styled-components";
 import { removeCartItems, updateCartItems } from "../store/action";
 import { useGetCartItems } from "../store/selector";
 import {

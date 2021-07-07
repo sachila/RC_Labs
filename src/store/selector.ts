@@ -2,7 +2,7 @@ import { CartItem } from "../models/CartItemModel";
 import useSelector from "./common/useSelector";
 
 export const useGetCartItems = (productId: string): CartItem => {
-  const { cartItems } = useSelector((state) => state);
+  const { cartItems } = useStateSelectors();
   const item = cartItems.find((item) => item.id === productId);
   if (!item)
     return {
@@ -10,4 +10,8 @@ export const useGetCartItems = (productId: string): CartItem => {
       quantity: 0,
     };
   return item;
+};
+
+export const useStateSelectors = () => {
+  return useSelector((state) => state);
 };

@@ -1,8 +1,9 @@
 import { Badge } from "react-bootstrap";
 import styled from "styled-components/macro";
+import { SIZES } from "./layout";
 
 export const CartBatch = styled(Badge)`
   position: relative;
-  bottom: 10px;
-  right: 10px;
+  bottom: ${SIZES.normal};
+  right: ${SIZES.normal};
 `;
